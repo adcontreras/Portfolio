@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Codystar&family=Fraunces:opsz,wght@9..144,500&family=Josefin+Sans:wght@200&family=Pacifico&family=Poiret+One&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ful-img" id="fulImgBox"> 
+
+        <img src="imgs/1.jpg" id="fulImg" alt="">
+        <span class="close" onclick="closeImg()">x</span>
+        <span class="previo" onclick="retrocede()">&lt;</span>
+        <span class="next" onclick="adelanta()">&gt;</span>
+       
+    </div>
+
+    <h1><em>Photo Gallery</em></h1>
+    <div class="grid-container" class="img-gallery">
+        <img class= "grid-item" src="imgs/1.jpg" onclick= "openFulImg(this.src)"  alt="">
+        <img class= "grid-item" src="imgs/2.jpg" onclick= "openFulImg(this.src)"  alt="">
+        <img class= "grid-item" src="imgs/3.jpg" onclick= "openFulImg(this.src)"  alt="">
+        <img class= "grid-item" src="imgs/4.jpg" onclick= "openFulImg(this.src)"  alt="">
+        <img class= "grid-item" src="imgs/5.jpg" onclick= "openFulImg(this.src)"  alt="">
+        <img class= "grid-item" src="imgs/6.jpg" onclick= "openFulImg(this.src)"  alt="">
+        <img class= "grid-item" src="imgs/7.jpg" onclick= "openFulImg(this.src)"  alt="">
+        <img class= "grid-item" src="imgs/8.jpg" onclick= "openFulImg(this.src)"  alt="">
+        <img class= "grid-item" src="imgs/9.jpg" onclick= "openFulImg(this.src)"  alt="">
+        <img class= "grid-item" src="imgs/10.jpg" onclick= "openFulImg(this.src)"  alt="">
+        <img class= "grid-item" src="imgs/11.jpg" onclick= "openFulImg(this.src)"  alt="">
+        <img class= "grid-item" src="imgs/12.jpg" onclick= "openFulImg(this.src)"  alt="">
+    </div>
+
+    <section>
+        <h4 >Photo and Styling</h>
+        <p>This photoshoot was inspired on .... by Adriana Contreras</p>
+    </section>
+
+    <script src="/path/to/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="script.js"></script>
+   
+   
+</body>
+</html>
