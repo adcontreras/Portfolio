@@ -8,7 +8,7 @@ body {
     margin:0;
     /*background-color: #224870;*/
     background: linear-gradient(rgba(204, 140, 179, 0.379),rgba(204, 140, 179, 0.379)),
-    url(/calculator/imgs/fondo-1.jpg);
+    url(../calculator/imgs/fondo-1.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -20,6 +20,7 @@ body {
     position: fixed;
     margin-left: 15px;
     font-family: 'Pacifico', cursive;
+    font-size: 50px;
     font-weight: lighter;
 }
 .container {
