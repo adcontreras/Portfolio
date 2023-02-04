@@ -1,49 +1,40 @@
-/* Reset Universal */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+ 
+}
 
-html {
-    box-sizing: border-box;
-    font-size: 62.5%;
-  }
-  
-  *,
-  *::after,
-  *::before {
-    box-sizing: inherit;
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-  }
+h1{
+  color: rgb(0, 0, 0);
+  text-align: center;
+  position: relative;
+  width: 80%;
+  margin: 20px auto;
+  font-weight:bold;
+  font-family: 'Square Peg', cursive;
+  font-size: 40px;
+
+}
+
+body{
+  background-color: rgb(255, 255, 255);   
+}
   
   /*Galeria de Imagenes*/
    #galeria {
-    position: fixed;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2px;
-    max-width: 700px;
-    min-width: 400px;
-    padding: 0 10px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-left: 60px;
+    align-items: flex-start;
   }
   
    #galeria img {
-   /* width: 100%;
-    height: auto;
-    border-radius: 5px;
-    cursor: pointer;
-  } */
-    width: 180px;
-    height: 180px;
-    margin: 5px;
-    object-fit: cover;
-    cursor: pointer;
-    border-radius: 5px;
+  width: auto;
+  height: 200px;
+  margin: 8px;
+  object-fit: cover;
+  border-radius: 5px 5px 5px 5px;
+  cursor: zoom-in;    
+
    }
   
   #img-activa {
@@ -69,9 +60,7 @@ html {
   /*Contenedor interno del Lightbox*/
   
   #contenedor-interno {
-    /*border: 2px #f3f3f3 solid;*/
     padding: 10px;
-    /*background: #3f3f3f;*/
     max-width: 300px;
     min-height: 200px;
     position: relative;
@@ -91,114 +80,44 @@ html {
   #btn-cierra {
     position: absolute;
     top:5%;
-    right: 5%;
+    right: 20%;
     font-size: 20px;
     color:#fff;
     cursor: pointer;
+    font-weight: bolder;
   }
   
   #btn-retrocede {
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 20%;
     font-size:30px;
   }
   
   #btn-adelanta {
     position: absolute;
     top: 50%;
-    right: 0;
+    right: 20%;
     font-size:30px;
   }
 
-
-/*html{
-    box-sizing: border-box;
-    height: 100%;
-    /*font-size: 62.5%;
-}
-
-*, 
-*::before,
-*::after{
-    box-sizing: inherit;
-}
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poiret One', cursive;
-}
-
-body{
-    height: 100%;
-    line-height: 1.6;
-}
-
-.title{
-    color: rgb(52, 5, 5);
+  .name{
+    font-family: 'Poppins', sans-serif;
     text-align: center;
+    font-weight: lighter;
+    font-size: large;
     position: relative;
     width: 80%;
-    margin: 50px auto;
-    font-style: italic;
-    font-weight:bold 
-}
+    margin: 20px auto;
 
-.name{
-    color: rgb(0, 0, 0);
-    text-align: center;
-    position: relative;
-    width: 80%;
-    margin: 50px auto;
-    font-weight:lighter; 
-}
-
-.date{
-    color: rgb(0, 0, 0);
-    text-align: center;
-    position: relative;
-    width: 80%;
-    margin: 50px auto;
-    font-weight:lighter; 
-}
-
-.photoTitle{
-    position: relative;
-    margin: 50px;
-    width: auto;
-    height: auto;
-    /*width: auto;
-    height: auto;
-    align-content: center;
-    margin: 30px auto;
-}
-
-
-#gallery{
-    /*position:fixed;
-    margin: 50px;
-  
-    align-content: center;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /*grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
-    grid-gap: 5px;
-    max-width: 700px;
-    min-width: 400px;
-    padding: 15px 15px;
-    /*top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-}
-
-#gallery img{
-    width: 100%;
-    height: auto;
-    /*border-radius: 5px;
-    cursor: pointer;
-
-}*/
+ }
+ 
+h5{
+     font-family: 'Poppins', sans-serif;
+     text-align: center;
+     position: relative;
+     width: 80%;
+     margin: 20px auto;
+ }
+     
 

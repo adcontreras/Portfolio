@@ -1,33 +1,52 @@
-const fulImgBox = document.getElementById("fulImgBox");
-fulImg = document.getElementById("fulImg");
 
+  /*Variables*/
 
-
-/*const btnAdelanta = document.getElementById("adelanta");
-const btnRetrocede = document.getElementById("retrocede");*/
-const imagenes = document.getElementById("grid-item");
+const btnCierra = document.querySelector('#btn-cierra');
+const btnAdelanta = document.querySelector('#btn-adelanta');
+const btnRetrocede = document.querySelector('#btn-retrocede');
+const imagenes = document.querySelectorAll('#grid-container img');
+const lightbox = document.querySelector('#contenedor-principal');
+const imagenActiva = document.querySelector('#img-activa');
 let indiceImagen = 0;
 
+/*Abre el Lightbox*/
 
-/*Open full image*/
-function openFulImg(reference){
-    fulImgBox.style.display = "flex";
-    fulImg.src = reference;
-}
+const abreLightbox = (event) => {
+  imagenActiva.src = event.target.src;
+  lightbox.style.display = 'flex';
+  indiceImagen = Array.from(imagenes).indexOf(event.target);
+};
 
-/*Close big image*/
-function closeImg(){
-    fulImgBox.style.display = "none";
-}
+imagenes.forEach((imagen) => {
+  imagen.addEventListener('click', abreLightbox);
+});
 
-/* next image*/
-function adelanta(){
-    if (indiceImagen === imagenes.length - 1) {
-      indiceImagen = -1;
-    }
-    fulImg.src = imagenes[indiceImagen + 1].src;
-    indiceImagen++;
-  };
-  
-  btnAdelanta.addEventListener('click', adelantaImagen);
-  
+/*Cierra el Lightbox */
+
+btnCierra.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+
+/* Adelanta la imagen*/
+
+const adelantaImagen = () => {
+  if (indiceImagen === imagenes.length - 1) {
+    indiceImagen = -1;
+  }
+  imagenActiva.src = imagenes[indiceImagen + 1].src;
+  indiceImagen++;
+};
+
+btnAdelanta.addEventListener('click', adelantaImagen);
+
+/*Retrocede la Imagen*/
+
+const retrocederImagen = () => {
+  if (indiceImagen === 0) {
+    indiceImagen = imagenes.length;
+  }
+  imagenActiva.src = imagenes[indiceImagen - 1].src;
+  indiceImagen--;
+};
+
+btnRetrocede.addEventListener('click', retrocederImagen);
